@@ -1,0 +1,25 @@
+#umbrel {
+    
+    background-color: #be2d2d;
+    width: 900px;
+    border: 135px solid black;
+    
+   
+    padding-top: 45px;
+    padding-right: 30px;
+    padding-bottom: 181px;
+    padding-left: 141px;
+   
+}
+.sanseri{
+font-family: "century gothic" ;
+font-style: normal;
+font-size: 15px;
+color: white;
+
+
+}
+.foto{
+    position: relative;
+   position: bottom right; 
+}

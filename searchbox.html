@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="searchbox.css">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>   
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Your best app</a>
+  <a href="#">team history contact</a>
+  <a href="#">suggest to friend</a>
+  <a href="https://www.facebook.com/"><img src="./eikones/facebook.png"></img></a>
+  <a href="https://twitter.com/"><img src="./eikones/twitter.png"></img></a>
+  <a href="https://plus.google.com"><img src="./eikones/googleplus.png"></img></a>
+</div>
+        <h1>type a location:</h1> 
+         <button id="access" onclick="doSomething()"><img src=".\eikones\accloc.png"></img></button> 
+        
+
+            <input id="searchInput" type="text" name="search" placeholder="Search..">
+            <button id="searchButton" onclick="searchMe()">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        
+        <p class="sentence">or give as your location</p> 
+       
+
+<span style="font-size:30px; color:#84df69; position:right; cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+
+    function searchMe(){
+        var inputValue;
+        inputValue=$("#searchInput").val();
+        console.log(inputValue);
+        window.location="./sidenav.html?city="+inputValue;
+        /* sendRequest(inputValue); */
+        /* var element;
+        var elementValue; */
+        /* element=$("#searchInput");
+        elementValue=element.val(); */
+    }
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+function doSomething(){
+     window.location="./sidenav.html";
+}
+
+</script>
+     
+</body>
+</html> 
