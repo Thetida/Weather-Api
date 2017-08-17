@@ -1,0 +1,64 @@
+body{
+font-family: "Lato", sans-serif;
+background-color: #9847cc;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#84df69;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    word-break: break-all;
+
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: bold;
+    word-spacing: 400px;
+    color: white;
+}
+
+.sidenav a {    /*letters mesa sto sidenav*/
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #9847cc;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.container{
+   background-color:  #be2d2d;
+}
+h1{
+    position: absolute;
+    left: 600px;
+    top: 200px;
+}
+p.day{
+    position: absolute;
+    left:650px;
+    top:150px;
+}

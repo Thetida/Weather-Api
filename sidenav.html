@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="sidenav.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+</head>
+<body onload="start()">   
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Your best app</a>
+  <a href="#">team history contact</a>
+  <a href="#">suggest to friend</a>
+  <a href="https://www.facebook.com/"><img src="./eikones/facebook.png"></img></a>
+  <a href="https://twitter.com/"><img src="./eikones/twitter.png"></img></a>
+  <a href="https://plus.google.com"><img src="./eikones/googleplus.png"></img></a>
+</div>
+<h1>ATHENS Gr</h1>
+<p class="day">TODAY</p>
+
+
+<span style="font-size:30px; color:#84df69; position:right; cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+// Epistrefei ena object//
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
+function start(){
+    var urlObject=getUrlVars();
+    var myCity=urlObject.city;
+    sendRequest(myCity);
+}
+
+
+
+function sendRequest(city){
+    var webApiUrl="http://api.openweathermap.org/data/2.5/forecast/daily?q="+ city +"&&APPID=8246eca4f47c8ca313256cee7faec69b&cnt=5" ;
+    $.ajax({url: webApiUrl, success: function(result){
+        console.log(result);
+        /* $("#div1").html(result); */
+    }});
+}
+</script>
+     
+</body>
+</html> 
