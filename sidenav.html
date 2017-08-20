@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="sidenav.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    
 </head>
 <body onload="start()">   
 
@@ -15,11 +17,45 @@
   <a href="https://twitter.com/"><img src="./eikones/twitter.png"></img></a>
   <a href="https://plus.google.com"><img src="./eikones/googleplus.png"></img></a>
 </div>
-<h1>ATHENS Gr</h1>
-<p class="day">TODAY</p>
+<p class="h1">TODAY</p>
+
+<h2></h2>
+<h3></h3>
+
+
+<h id="max4"></h>
+<h id="min5"></h>
+<h id="max6"></h>
+<h id="min7"></h>
+<h id="max8"></h>
+<h id="min9"></h>
+<h id="max10"></h>
+<h id="min11"></h>
+<h id="max12"></h>
+<h id="min13"></h>
+
 
 
 <span style="font-size:30px; color:#84df69; position:right; cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<div class="polaroid">
+<img  src="./eikones/cloudy.png"></img>
+</div>
+<div class="polaroid1">
+<img  src="./eikones/cloud.png"></img>
+</div>
+<div class="polaroid2">
+<img  src="./eikones/sun.png"></img>
+</div>
+<div class="polaroid3">
+<img  src="./eikones/sun.png"></img>
+</div>
+<div class="polaroid4">
+<img  src="./eikones/cloud.png"></img>
+</div>
+<div class="polaroid5">
+<img  src="./eikones/sun.png"></img>
+</div>
 
 <script>
 function openNav() {
@@ -29,7 +65,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-// Epistrefei ena object//
+// Epistrofh object apto api//
 function getUrlVars()
 {
     var vars = [], hash;
@@ -49,16 +85,25 @@ function start(){
     sendRequest(myCity);
 }
 
-
-
 function sendRequest(city){
-    var webApiUrl="http://api.openweathermap.org/data/2.5/forecast/daily?q="+ city +"&&APPID=8246eca4f47c8ca313256cee7faec69b&cnt=5" ;
+    var webApiUrl="http://api.openweathermap.org/data/2.5/forecast/daily?q="+ city +"&&APPID=8246eca4f47c8ca313256cee7faec69b&cnt=5&units=metric" ;
     $.ajax({url: webApiUrl, success: function(result){
-        console.log(result);
+        $( "h2" ).text( result.city.name );  /* Athens */
+        $( "h3" ).text( result.city.country ); /* GR */
+        $( "#max4" ).text(result.list[0].temp.max);
+        $( "#min5" ).text(result.list[0].temp.min);
+        $( "#max6").text(result.list[1].temp.max);
+        $( "#min7" ).text(result.list[1].temp.min);
+        $( "#max8" ).text(result.list[2].temp.max);
+        $( "#min9" ).text(result.list[2].temp.min);
+        $( "#max10").text(result.list[3].temp.max);
+        $( "#min11").text(result.list[3].temp.min);
+        $( "#max12").text(result.list[4].temp.max);
+        $( "#min13").text(result.list[4].temp.min);
+        
         /* $("#div1").html(result); */
     }});
 }
 </script>
-     
 </body>
 </html> 
