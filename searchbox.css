@@ -68,15 +68,6 @@ background-color: #be2d2d;
 .col{
 	background-color: #be2d2d;
 }
-.sentence{
-font-family: "century gothic" ;
-font-style: normal;
-font-size: 20px;
-color:white;
-position: absolute;
-left: 550px;
-top: 300px;
-}
 
 /* SEARCH BOX */
 input[type=text] {
@@ -96,26 +87,35 @@ input[type=text] {
     left: 600px;
     top: 250px;
 }
-
-input[type=text]:focus {
-    width: 100%;
-}
-h1{
-    font-family: "century gothic"s;
-    font-style: normal;
-    font-size: 20px;
-    position: absolute;
+p.sentence1{
+   font-family: "century gothic" ;
+font-style: normal;
+font-size: 20px;
+color:white;
+position: absolute;
     left: 590px;
     top: 180px;
-    color:white;
 }
+
+.sentence{
+font-family: "century gothic" ;
+font-style: normal;
+font-size: 20px;
+color:white;
+position: absolute;
+left: 550px;
+top: 350px;
+}
+/*access location icon */
 #access{
     position: absolute;
-    left: 590px;
-    bottom: 100px;
+    left: 580px;
+    bottom:150px;
 }
 #searchButton{
-    position: absolute;
-    left: 500px;
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    left: 600px;
     top: 250px; 
 }

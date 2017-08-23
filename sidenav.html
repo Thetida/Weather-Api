@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="sidenav.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
     
@@ -19,10 +19,8 @@
 </div>
 <p class="h1">TODAY</p>
 
-<h2></h2>
-<h3></h3>
-
-
+<h2 id="max2"></h2>
+<h3 id="min3"></h3>
 <h id="max4"></h>
 <h id="min5"></h>
 <h id="max6"></h>
@@ -32,30 +30,20 @@
 <h id="max10"></h>
 <h id="min11"></h>
 <h id="max12"></h>
-<h id="min13"></h>
+<h id="min13"></h> 
+<h id="max14"></h> 
+<h id="min15"></h> 
 
+<h id="max17"></h> 
+<h id="max18"></h> 
+<h id="max19"></h> 
+<h id="max20"></h> 
+<h id="max21"></h> 
+<h id="max22"></h> 
 
 
 <span style="font-size:30px; color:#84df69; position:right; cursor:pointer" onclick="openNav()">&#9776;</span>
 
-<div class="polaroid">
-<img  src="./eikones/cloudy.png"></img>
-</div>
-<div class="polaroid1">
-<img  src="./eikones/cloud.png"></img>
-</div>
-<div class="polaroid2">
-<img  src="./eikones/sun.png"></img>
-</div>
-<div class="polaroid3">
-<img  src="./eikones/sun.png"></img>
-</div>
-<div class="polaroid4">
-<img  src="./eikones/cloud.png"></img>
-</div>
-<div class="polaroid5">
-<img  src="./eikones/sun.png"></img>
-</div>
 
 <script>
 function openNav() {
@@ -84,22 +72,35 @@ function start(){
     var myCity=urlObject.city;
     sendRequest(myCity);
 }
-
 function sendRequest(city){
-    var webApiUrl="http://api.openweathermap.org/data/2.5/forecast/daily?q="+ city +"&&APPID=8246eca4f47c8ca313256cee7faec69b&cnt=5&units=metric" ;
+    var webApiUrl="http://api.openweathermap.org/data/2.5/forecast/daily?q="+ city +"&&APPID=8246eca4f47c8ca313256cee7faec69b&cnt=6&units=metric";
+    
     $.ajax({url: webApiUrl, success: function(result){
-        $( "h2" ).text( result.city.name );  /* Athens */
-        $( "h3" ).text( result.city.country ); /* GR */
-        $( "#max4" ).text(result.list[0].temp.max);
-        $( "#min5" ).text(result.list[0].temp.min);
-        $( "#max6").text(result.list[1].temp.max);
-        $( "#min7" ).text(result.list[1].temp.min);
-        $( "#max8" ).text(result.list[2].temp.max);
-        $( "#min9" ).text(result.list[2].temp.min);
-        $( "#max10").text(result.list[3].temp.max);
-        $( "#min11").text(result.list[3].temp.min);
-        $( "#max12").text(result.list[4].temp.max);
-        $( "#min13").text(result.list[4].temp.min);
+        console.log(result);
+        $( "#max2" ).text( result.city.name );  /* Athens */
+        $( "#min3" ).text( result.city.country ); /* GR */
+        $( "#max14").text(result.list[0].temp.max.toFixed(0));
+        $( "#min15").text(result.list[0].temp.min.toFixed(0));
+        $( "#max6").text(result.list[1].temp.max.toFixed(0));
+        $( "#min7" ).text(result.list[1].temp.min.toFixed(0));
+        $( "#max8" ).text(result.list[2].temp.max.toFixed(0));
+        $( "#min9" ).text(result.list[2].temp.min.toFixed(0));
+        $( "#max10").text(result.list[3].temp.max.toFixed(0));
+        $( "#min11").text(result.list[3].temp.min.toFixed(0));
+        $( "#max12").text(result.list[4].temp.max.toFixed(0));
+        $( "#min13").text(result.list[4].temp.min.toFixed(0));
+        $( "#max4" ).text(result.list[5].temp.max.toFixed(0));
+        $( "#min5" ).text(result.list[5].temp.min.toFixed(0));
+
+        $("html").append("<div class='icon0'><img src='./eikones/"+result.list[0].weather[0].icon+".png'></div>");
+        $("html").append("<div class='icon1'><img src='./eikones/"+result.list[1].weather[0].icon+".png'></div>");
+        $("html").append("<div class='icon2'><img src='./eikones/"+result.list[2].weather[0].icon+".png'></div>");
+        $("html").append("<div class='icon3'><img src='./eikones/"+result.list[3].weather[0].icon+".png'></div>");
+        $("html").append("<div class='icon4'><img src='./eikones/"+result.list[4].weather[0].icon+".png'></div>");
+        $("html").append("<div class='icon5'><img src='./eikones/"+result.list[5].weather[0].icon+".png'></div>");
+     
+        
+      
         
         /* $("#div1").html(result); */
     }});

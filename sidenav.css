@@ -37,6 +37,7 @@ background-color: #9847cc;
     color: #f1f1f1;
 }
 
+
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -44,7 +45,6 @@ background-color: #9847cc;
     font-size: 36px;
     margin-left: 50px;
 }
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -52,13 +52,183 @@ background-color: #9847cc;
 .container{
    background-color:  #be2d2d;
 }
-h1{
-    position: absolute;
-    left: 600px;
-    top: 200px;
+p.h1{
+    max-width: 100%;
+    height: auto;
+    
+    position: fixed;
+    left: 660px;
+    top: 50px;
+    font-family: "century gothic" ;
+    color: #84df69;
+    font-style: normal;
+    font-size: 30px;
 }
-p.day{
-    position: absolute;
+#max2{max-width: 100%;
+    height: auto;
+    position: fixed;
     left:650px;
-    top:150px;
+    top:100px;
+    color: white;
+    font-style: normal;
+}
+#min3{
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    left:750px;
+    top:107px;
+    color: white;
+    font-style: normal;
+}
+#max4{
+    position: fixed;
+    left:300px;
+    bottom:140px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 20px;
+    color: #84df69;
+    font-weight: bold;
+    
+}
+#min5{
+    position: fixed;
+    left:300px;
+    bottom:115px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 20px;
+    color: #84df69;
+}
+
+#max6{ position: fixed;
+    left:500px;
+    bottom:140px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 20px;
+    color: #84df69;
+    font-weight: bold;
+}
+#min7{ position: fixed;
+    left:500px;
+    bottom:115px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 20px;
+    color: #84df69;
+    
+}
+#max8{ position: fixed;
+    left:700px;
+    bottom:138px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 20px;
+    color: #84df69;
+    font-weight: bold;
+}
+#min9{ position: fixed;
+    left:700px;
+    bottom:113px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 20px;
+    color: #84df69;
+}
+#max10{ position: fixed;
+    left:900px;
+    bottom:136px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 20px;
+    color: #84df69;
+    font-weight: bold;
+}
+#min11{ position: fixed;
+    left:900px;
+    bottom:112px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 20px;
+    color: #84df69;
+}  
+#max12{ position: fixed;
+    left:1100px;
+    bottom:136px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 20px;
+    color: #84df69;
+    font-weight: bold;
+}
+#min13{ 
+    position: fixed;
+    left:1100px;
+    bottom:112px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 20px;
+    color: #84df69;
+} 
+#max14{ position: fixed;
+    left: 700px;
+    bottom: 340px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 25px;
+    color: #84df69;
+    font-weight: bold;
+}
+#min15{ 
+    position: fixed;
+    left: 700px;
+    bottom: 305px;
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 25px;
+    color: #84df69;
+}     
+.icon0{
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    left: 680px;
+    bottom: 380px;
+}
+.icon1{
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    left:280px;
+    bottom: 200px;
+}
+.icon2{
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    left: 480px;
+    bottom: 200px;
+}
+.icon3{
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    left: 680px;
+    bottom: 200px;
+}
+.icon4{
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    left: 880px;
+    bottom: 200px;
+}
+.icon5{
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    left: 1080px;
+    bottom: 200px;
 }

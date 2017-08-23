@@ -1,25 +1,31 @@
 #umbrel {
     
     background-color: #be2d2d;
-    width: 900px;
-    border: 135px solid black;
+     max-width: 100%;
+    /*width: 900px; */
+    border: 135px solid #be2d2d;
     
    
-    padding-top: 45px;
+    padding-top: 47px;
     padding-right: 30px;
-    padding-bottom: 181px;
-    padding-left: 141px;
+    padding-bottom: 305px;
+    padding-left: 147px;
    
 }
 .sanseri{
-font-family: "century gothic" ;
-font-style: normal;
-font-size: 15px;
-color: white;
-
+    font-family: "century gothic" ;
+    font-style: normal;
+    font-size: 15px;
+    color: white;
+    position:fixed;
+    left:625px;
+    bottom: 185px;
 
 }
-.foto{
-    position: relative;
-   position: bottom right; 
+.umbrell{
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 250px;
+    left: 600px;
 }
